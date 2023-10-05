@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="padding-left: 570px;margin-top: 200px;">Welcome {{name}}</h3>
+    <div style="display: flex;align-items: center;justify-content: center;">
+        <div style="margin-right: 50px;">
+            <a class="button"  href='{% url "meeting" %}' style="width: 270px;background-color: rgb(123, 123, 181);color: white;border: none;height: 60px;">New Meeting</a><br>
+        </div>
+        <div style="margin-right: 50px;">
+            <a  href='{% url "join_room" %}' style="width: 270px;background-color: rgb(123, 123, 181);color: white;border: none;height: 60px;">Join Meeting</a><br>
+        </div>
+        <div style="margin-right: 50px;">
+            <a  href  ="{% url 'logout' %}" style="width: 270px;background-color: rgb(123, 123, 181);color: white;border: none;height: 60px;">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

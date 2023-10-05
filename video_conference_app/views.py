@@ -16,16 +16,13 @@ def register(request):
 
 def login_view(request):
     if request.method =='POST':
-        print("jjjjjjjjjjj")
         email = request.POST.get("email")
         password = request.POST.get('password')
         user = authenticate(request,username=email,password=password)
         if user is not None:
-            print("kkkkkkkkkkkkkk")
             login(request,user)
             return redirect('/dashboard')
         else:
-            print("9999999999")
             return render(request,'signin.html',{'error':'Invalid credentials'})
     return render(request,'signin.html')
 
